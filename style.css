@@ -158,6 +158,11 @@ body {
   margin-left: 13px;
   margin-right: 13px;
 }
+
+td{
+  padding: 5px;
+}
+
 #expand{
   margin-left: 50px;
   padding: 10px;

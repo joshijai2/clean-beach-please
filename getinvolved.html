@@ -32,50 +32,39 @@
       </div>
       <div class="contentTitle" id="signup">Sign Up to Help Us</div>
       <div class="contentText">
-        <form name="signup" action="" onsubmit="return formValidation()" method="POST">
+        <form name="signup" action="/signup" onsubmit="return formValidation()" method="POST">
           <table>
             <tr>
-              <td><label for="username">Your Name: </label></td>
-              <td><input type="text" required name="username" size=20 placeholder="Name"></td>
+              <td><label for="name">Your Name: </label></td>
+              <td><input type="text" required name="name" size=20 placeholder="Name"></td>
             </tr>
-            <tr></tr>
-            <tr></tr>
             <tr>
               <td><label for="email">Email Address: </label></td>
               <td><input type="text" required name="email" size=40 placeholder="Email"></td>
             </tr>
-            <tr></tr>
-            <tr></tr>
             <tr>
               <td><label for="phone">Phone Number: </label></td>
-              <td><input type="text" required name="phone" size=15></td>
+              <td><input type="text" required name="phone" placeholder="Phone no." size=15></td>
             </tr>
-            <tr></tr>
-            <tr></tr>
             <tr>
               <td><label for="event">Event Name: </label></td>
               <td><select name="event">
                   <option selected="" value="Default">Please Select the Event </option>
-                  <option value="event 1">Event 1</option>
-                  <option value="event 2">Event 2</option>
-                  <option value="event 3">Event 3</option>
-                  <option value="event 4">Event 4</option>
-                  <option value="event 5">Event 5</option>
+                  <option value="event 1">Clean Up campaign funded by VIT, Chennai</option>
+                  <option value="event 2">Grand Beach Clean in collaboration with VIT University, Vellore</option>
                 </select>
               </td>
             </tr>
-            <tr></tr>
-            <tr></tr>
             <tr>
-              <td colspan="2"><label for="group">Is your Company/Organization volunteering? </label></td>
+              <td colspan="2"><label for="group">
+                  Is your Company/Organization volunteering? </label></td>
               <td></td>
             </tr>
             <tr>
-              <td><input type="radio" name="group" value="yes">Yes</td>
-              <td><input type="radio" name="group" value="no">No</td>
+              <td></td>
+              <td><input type="radio" name="group" value="yes"> Yes <span style="margin-right: 10px;"></span> <input
+                  type="radio" name="group" value="no"> No </td>
             </tr>
-            <tr></tr>
-            <tr></tr>
             <tr>
               <td><label for="time">What time can you work for?</label></td>
               <td><input type="radio" name="time" value="slot1">8-11</td>
@@ -88,13 +77,10 @@
               <td></td>
               <td><input type="radio" name="time" value="slot3">4-7</td>
             </tr>
-            <tr></tr>
             <tr>
               <td></td>
               <td><input type="radio" name="time" value="slot4">Any time</td>
             </tr>
-            <tr></tr>
-            <tr></tr>
             <tr>
               <td><label for="work">What work are you interested in?</label></td>
               <td><input type="checkbox" name="work" value="cleaning">Cleaning</td>
@@ -115,8 +101,6 @@
               <td></td>
               <td><input type="checkbox" name="work" value="else">Wherever Needed</td>
             </tr>
-            <tr></tr>
-            <tr></tr>
             <tr>
               <td align="right"><input type="submit" name="submit" value="Submit"></td>
               <td align="left"><input type="reset" name="reset" value="Reset"></td>
@@ -145,11 +129,9 @@
     </div>
   </div>
   <div id="footer">
-    Web development by <a target="_blank" href="https://linkedin.com/in/joshijai2/">JJ</a>, <a
-      target="_blank" href="https://linkedin.com/in/abhinabamitra19/">Abhi</a> and <a
-      target="_blank" href="https://linkedin.com/in/kushagra05/">Kush</a>
-
-
+    Web development by <a target="_blank" href="https://linkedin.com/in/joshijai2/">JJ</a>, <a target="_blank"
+      href="https://linkedin.com/in/abhinabamitra19/">Abhi</a> and <a target="_blank"
+      href="https://linkedin.com/in/kushagra05/">Kush</a>
   </div>
 </body>
 
