@@ -1,8 +1,8 @@
 {
   "name": "clean-beach-please",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "non profit organization website for beach cleaning campaign",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -18,7 +18,6 @@
   "homepage": "https://github.com/joshijai2/Clean-beach-please#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "open": "^7.0.0",
-    "opn": "^6.0.0"
+    "open": "^7.0.0"
   }
 }
