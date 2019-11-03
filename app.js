@@ -1,4 +1,11 @@
 var express = require('express');
+var path = require('path');
+var cookieParser = require('cookie-parser');
+var logger = require('morgan');
+
+var indexRouter = require('./routes/index');
+var usersRouter = require('./routes/users');
+
 var open = require('open');
 var bodyParser = require("body-parser");
 const mongoose = require('mongoose');
@@ -12,10 +19,21 @@ db.on('error', console.log.bind(console, "Connection error"));
 db.once('open', function (callback) {
     console.log("Connection succeeded");
 })
+
 var app = express();
 
+app.use(logger('dev'));
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+app.use(cookieParser());
+app.use(express.static(path.join(__dirname, 'public')));
+
+app.use('/', indexRouter);
+app.use('/users', usersRouter);
+
+module.exports = app;
+
 app.use(bodyParser.json());
-app.use(express.static('public'));
 app.use(bodyParser.urlencoded({
     extended: true
 }));
@@ -40,115 +58,9 @@ app.post('/signup', function (req, res) {
     }
     db.collection('details').insertOne(data, function (err, collection) {
         if (err) throw err;
-        console.log("Record inserted Successfully");
+        console.log(data + "Record inserted Successfully");
     });
-    return res.redirect('signup_success');
+    return res.redirect('signup_success.html');
 })
 
-app.get('/', function (req, res) {
-    res.set({
-        'Access-control-Allow-Origin': '*'
-    });
-    res.sendFile(__dirname + "/index.html");
-});
-
-app.get('/style.css', function (req, res) {
-    res.sendFile(__dirname + "/style.css");
-});
-
-app.get('/about', function (req, res) {
-    res.sendFile(__dirname + "/about.html");
-})
-
-app.get('/about#emailus', function (req, res) {
-    res.sendFile(__dirname + "/about.html#emailus");
-})
-
-app.get('/about#contact', function (req, res) {
-    res.sendFile(__dirname + "/about.html#contact");
-})
-
-app.get('/blog', function (req, res) {
-    res.sendFile(__dirname + "/blog.html");
-});
-
-app.get('/blog2', function (req, res) {
-    res.sendFile(__dirname + "/blog2.html");
-});
-
-app.get('/blog1', function (req, res) {
-    res.sendFile(__dirname + "/blog1.html");
-});
-
-app.get('/events', function (req, res) {
-    res.sendFile(__dirname + "/events.html");
-});
-
-app.get('/getinvolved', function (req, res) {
-    res.sendFile(__dirname + "/getinvolved.html");
-});
-
-app.get('/signup_success', function (req, res) {
-    res.sendFile(__dirname + "/signup_success.html");
-});
-
-app.get('/payment', function (req, res) {
-    res.sendFile(__dirname + "/payment.html");
-});
-
-app.get('/getinvolved#signup', function (req, res) {
-    res.sendFile(__dirname + "/getinvolved.html#signup");
-});
-
-app.get('/getinvolved#donate', function (req, res) {
-    res.sendFile(__dirname + "/getinvolved.html#donate");
-});
-
-app.get('/images/background.gif', function (req, res) {
-    res.sendFile(__dirname + "/images/background.gif");
-});
-
-app.get('/images/background.png', function (req, res) {
-    res.sendFile(__dirname + "/images/background.png");
-});
-
-app.get('/images/blog2_image1.jpg', function (req, res) {
-    res.sendFile(__dirname + "/images/blog2_image1.jpg");
-});
-
-app.get('/images/content_back.png', function (req, res) {
-    res.sendFile(__dirname + "/images/content_back.png");
-});
-
-app.get('/images/favicon.png', function (req, res) {
-    res.sendFile(__dirname + "/images/favicon.png");
-});
-
-app.get('/images/footer.png', function (req, res) {
-    res.sendFile(__dirname + "/images/footer.png");
-});
-
-app.get('/images/image1.jpg', function (req, res) {
-    res.sendFile(__dirname + "/images/image1.jpg");
-});
-
-app.get('/images/image2.jpg', function (req, res) {
-    res.sendFile(__dirname + "/images/image2.jpg");
-});
-
-app.get('/images/image3.jpg', function (req, res) {
-    res.sendFile(__dirname + "/images/image3.jpg");
-});
-
-app.get('/images/image4.jpg', function (req, res) {
-    res.sendFile(__dirname + "/images/image4.jpg");
-});
-
-app.get('/images/tab.png', function (req, res) {
-    res.sendFile(__dirname + "/images/tab.png");
-});
-
-app.listen(3000, function () {
-    console.log("Server is running on port 3000");
-    open('http://localhost:3000');
-});
+open('http://localhost:3000');

@@ -4,6 +4,8 @@
   "description": "non profit organization website for beach cleaning campaign",
   "main": "app.js",
   "scripts": {
+    "start": "node ./bin/www",
+    "devstart": "nodemon ./bin/www",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,7 +19,14 @@
   },
   "homepage": "https://github.com/joshijai2/Clean-beach-please#readme",
   "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
     "express": "^4.17.1",
+    "mongoose": "^5.7.7",
+    "morgan": "~1.9.1",
     "open": "^7.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.4"
   }
 }
