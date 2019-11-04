@@ -186,6 +186,10 @@ td{
   z-index: 5;
 }
 
+input.ng-invalid {
+  border-color: red;
+}
+
 .contact-footer{
   width: 40%;
   margin: 2.5% 4%;
