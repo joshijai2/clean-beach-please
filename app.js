@@ -42,7 +42,7 @@ app.post('/signup', function (req, res) {
         if (err) throw err;
         console.log("Record inserted Successfully");
     });
-    return res.redirect('signup_success');
+    return res.redirect('signup_success.html');
 })
 
 app.get('/', function (req, res) {

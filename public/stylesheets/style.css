@@ -6,7 +6,7 @@ body {
     serif;
   font-size: 13px;
   color: #061c37;
-  background: #014d5d url(./images/background.gif) no-repeat center center fixed;
+  background: #014d5d url(../images/background.gif) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -55,7 +55,7 @@ body {
   width: 132px;
   height: 35px;
   line-height: 35px;
-  background-image: url(images/tab.png);
+  background-image: url(../images/tab.png);
 }
 
 #mainPicture {
@@ -71,7 +71,7 @@ body {
   width: 650px;
   height: 325px;
   top: 10px;
-  background-image: url(images/image1.jpg);
+  background-image: url(../images/image1.jpg);
   background-repeat: no-repeat;
 }
 #mainPicture #picture2 {
@@ -79,7 +79,7 @@ body {
   width: 650px;
   height: 325px;
   top: 10px;
-  background-image: url(images/image2.jpg);
+  background-image: url(../images/image2.jpg);
   background-repeat: no-repeat;
 }
 #mainPicture #picture3 {
@@ -87,7 +87,7 @@ body {
   width: 650px;
   height: 325px;
   top: 10px;
-  background-image: url(images/image3.jpg);
+  background-image: url(../images/image3.jpg);
   background-repeat: no-repeat;
 }
 #mainPicture #picture4 {
@@ -95,7 +95,7 @@ body {
   width: 650px;
   height: 325px;
   top: 10px;
-  background-image: url(images/image4.jpg);
+  background-image: url(../images/image4.jpg);
   background-repeat: no-repeat;
 }
 
@@ -137,7 +137,7 @@ body {
   top: -3px;
   height: auto;
   text-align: justify;
-  background-image: url(images/content_back.png);
+  background-image: url(../images/content_back.png);
   background-repeat: repeat-x;
   padding-bottom: 25px;
 }
@@ -185,6 +185,17 @@ td{
   width: 620px;
   z-index: 5;
 }
+
+input.ng-invalid {
+  border-color: red;
+}
+
+.contact-footer{
+  width: 40%;
+  margin: 2.5% 4%;
+  float: left;
+}
+
 .footer {
   margin-top: 10px;
   border: 5px solid #fff;
@@ -194,7 +205,7 @@ td{
   height: auto;
   position: relative;
   overflow: hidden;
-  background-image: url(images/content_back.png);
+  background-image: url(../images/content_back.png);
   background-repeat: repeat-x;
   width: 660px;
 }
@@ -218,7 +229,7 @@ td{
   width: 142px;
   height: 35px;
   line-height: 35px;
-  background-image: url(images/tab.png);
+  background-image: url(../images/tab.png);
   text-decoration: none;
   text-shadow: 1px 1px #000;
 }
@@ -236,7 +247,7 @@ td{
   width: 670px;
   height: 16px;
   margin-top: 10px;
-  background: url(images/footer.png) no-repeat;
+  background: url(../images/footer.png) no-repeat;
   text-align: center;
   font-size: 11px;
   font-family: Arial, Helvetica, sans-serif;
